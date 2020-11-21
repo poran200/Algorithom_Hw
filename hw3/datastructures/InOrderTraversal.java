@@ -12,7 +12,6 @@ public class InOrderTraversal<E> extends Traversal<E> {
     public List<E> of(BinaryTree<E> tree) {
         inorder(tree.root());
         return list;
-        // TODO: implement inorder traversal of binary trees
     }
     public void inorder(BinaryTreeNode<E> treeNode){
         if (treeNode != null){

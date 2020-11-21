@@ -2,6 +2,7 @@ package hw3.datastructures;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Ritwik Banerjee
@@ -33,19 +34,30 @@ public class BinaryTreeNode<E> {
     public void setRight(BinaryTreeNode<E> node) { this.right = node; }
     
     public void setParent(BinaryTreeNode<E> node) { this.parent = node; }
-    
+
     /**
-     * TODO: check equality between two nodes such that it extends to checking for equality between two trees rooted at these nodes.
-     *
+      *
      * @param o
      * @return
      */
     @Override
     public boolean equals(Object o) {
+     return isEqual(this, (BinaryTreeNode<E>) o);
+    }
+    boolean isEqual(BinaryTreeNode<E> treeNode ,BinaryTreeNode<E> treeNode1){
+        if (treeNode == null && treeNode1 == null){
+            return true;
+        }
+        if (treeNode != null && treeNode1 != null)
+            return (treeNode.element.equals(treeNode1.element)
+                    && isEqual(treeNode.left,treeNode1.left)
+                    && isEqual(treeNode.right,treeNode1.right)
+            );
         return false;
     }
-    
-    /**
+
+
+        /**
      * !!DO NOT MODIFY THIS CODE!!
      *
      * @return
@@ -57,7 +69,7 @@ public class BinaryTreeNode<E> {
         result = 31 * result + (right != null ? right.hashCode() : 0);
         return result;
     }
-    
+
     /** !!DO NOT MODIFY THIS CODE!! */
     private void print(String prefix, boolean isTail) {
         System.out.println(prefix + (isTail ? "'-- " : "|-- ") + element.toString());

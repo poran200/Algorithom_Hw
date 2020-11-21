@@ -12,7 +12,7 @@ public class PostOrderTraversal<E> extends Traversal<E> {
     public List<E> of(BinaryTree<E> tree) {
         postOrder(tree.root());
         return list;
-        // TODO: implement postorder traversal of binary trees
+        // done
     }
     private void postOrder(BinaryTreeNode<E> treeNode){
         if (treeNode != null){

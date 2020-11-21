@@ -149,7 +149,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
     public List<BinaryTreeNode<T>> find(T t) {
         findElement(t);
         return scarcePath;
-        // TODO: implement the search/find algorithm for binary search trees
     }
     public BinaryTreeNode<T> findElement(T t){
        return findRecursive(root,t);

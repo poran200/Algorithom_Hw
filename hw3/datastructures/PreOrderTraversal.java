@@ -14,7 +14,6 @@ public class PreOrderTraversal<E> extends Traversal<E> {
     public List<E> of(BinaryTree<E> tree) {
         preorder(tree.root());
         return laptops;
-        // TODO: implement preorder traversal of binary trees
     }
     private void preorder(BinaryTreeNode<E> treeNode){
         if (treeNode != null){

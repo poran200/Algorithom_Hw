@@ -42,14 +42,13 @@ public class ChainedHashSet<E> implements Set<E> {
 
     @Override public int size() {
         return size;
-        // todo
+
         //done
     }
 
     @Override public boolean isEmpty() {
 
         return this.size() == 0;
-        // todo
         //done
     }
 

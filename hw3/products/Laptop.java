@@ -1,7 +1,7 @@
 package hw3.products;
 
 /**
- * TODO: The 'Laptop' object should be comparable.
+ * done
  *
  * @author Ritwik Banerjee
  */
@@ -34,7 +34,6 @@ public class Laptop implements Comparable<Laptop> {
 
     @Override
     public int compareTo(Laptop o) {
-        //todo check later
         return Integer.compare(o.price, this.price);
     }
 
